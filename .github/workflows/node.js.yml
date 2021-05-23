@@ -29,3 +29,7 @@ jobs:
       run: |
         npm install
         node server.js
+      env:
+        USERNAME: ${{ secrets.USERNAME }}
+        PASSWORD: ${{ secrets.PASSWORD }}
+        CLOUD_ID: ${{ secrets.CLOUD_ID }}
