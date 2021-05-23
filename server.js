@@ -8,6 +8,16 @@ async function getData (reddit, id, res) {
     await axios
     .get(mainUrl)
     .then((response) => {
+        client.deleteByQuery({
+            index: "dankmemes",            
+            body: {
+                query: {
+                    match_all: {}
+                }
+            }
+        },  (err, resp) => {
+            console.log(resp);
+        });
         for (memeNumber = 0; memeNumber < 10; memeNumber++) {
             console.log(response.data["data"]["children"][memeNumber]["data"]["url_overridden_by_dest"]);
             memeURL = response.data["data"]["children"][memeNumber]["data"]["url_overridden_by_dest"];
