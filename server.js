@@ -4,7 +4,7 @@ const axios = require("axios");
 
 let memeURL = '';
 async function getData (reddit, id, res) {
-    const mainUrl = `https://reddit.com/r/dankmemes.json?limit=10`;
+    const mainUrl = `https://reddit.com/r/dankmemes.json?limit=100`;
     await axios
     .get(mainUrl)
     .then((response) => {
@@ -18,7 +18,7 @@ async function getData (reddit, id, res) {
         },  (err, resp) => {
             console.log(resp);
         });
-        for (memeNumber = 0; memeNumber < 10; memeNumber++) {
+        for (memeNumber = 0; memeNumber < 100; memeNumber++) {
             console.log(response.data["data"]["children"][memeNumber]["data"]["url_overridden_by_dest"]);
             memeURL = response.data["data"]["children"][memeNumber]["data"]["url_overridden_by_dest"];
             console.log(response.data["data"]["children"][memeNumber]["data"]["title"]);
