@@ -23,7 +23,13 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: ${{ matrix.node-version }}
-      if: matrix.os == '14.x'
+        
+    - name: This is where magic happens
+      if: matrix.node-version == '14.x'
       run: |
         npm install
         node server.js
+      env:
+        USERNAME: ${{ secrets.USERNAME }}
+        PASSWORD: ${{ secrets.PASSWORD }}
+        CLOUD_ID: ${{ secrets.CLOUD_ID }}
