@@ -24,6 +24,6 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
       if: matrix.os == '14.x'
-      run: |
+    - run: |
         npm install
         node server.js
