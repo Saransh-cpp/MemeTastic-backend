@@ -23,6 +23,7 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: ${{ matrix.node-version }}
-    - run: |
+      if: matrix.os == '14.x'
+      run: |
         npm install
         node server.js
