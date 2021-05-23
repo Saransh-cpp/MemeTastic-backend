@@ -25,7 +25,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
         
     - name: This is where magic happens
-      if: matrix.os == '14.x'
+      if: matrix.node-version == '14.x'
       run: |
         npm install
         node server.js
