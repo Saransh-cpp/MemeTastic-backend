@@ -3,7 +3,7 @@ const axios = require("axios");
 
 
 let memeURL = '';
-async function getData (reddit, id, res) {
+async function getData () {
     const mainUrl = `https://reddit.com/r/dankmemes.json?limit=100`;
     await axios
     .get(mainUrl)
