@@ -4,7 +4,13 @@ const axios = require("axios");
 
 let memeURL = '';
 async function getData () {
-    const mainUrl = `https://reddit.com/r/dankmemes.json?limit=100`;
+    // ==================================IMPORTANT==================================================
+    // =The subreddit has been changed to "memes" from "dankmemes" to avoid offensive/NSFW content.=
+    // =You will find the index still named dankmemes because the name won't effect the content.   =
+    // =All the memes stored in the "dankmemes" index are being pulled from the "memes" subreddit  =
+    // =to abide by the rules of Hackathon.                                                        =
+    // =============================================================================================
+    const mainUrl = `https://reddit.com/r/memes.json?limit=100`;
     await axios
     .get(mainUrl)
     .then((response) => {
