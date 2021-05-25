@@ -8,7 +8,7 @@ This is the backend for my MemeTastic Application.
 
 ## How it works
 
-- Scrapes top 100 memes from subreddit dankmemes using reddit's public API.
+- Scrapes top 100 memes from subreddit `memes` using reddit's public API.
 
 - Adds the `link` and the `title` of those 100 memes in `elasticsearch` which can then be visualised using `kibana`.
 
