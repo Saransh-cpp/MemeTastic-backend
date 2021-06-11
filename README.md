@@ -2,7 +2,7 @@
 
 <!-- ![MemeTastic](https://github.com/Saransh-cpp/MemeTastic-backend/actions/workflows/node.js.yml/badge.svg?branch=master) -->
 
-Created for Elasticsearch X Code for Cause Hackathon.
+Created for Elasticsearch X Code for Cause Hackathon. (Winner for the hackthon - [devpost project](https://devpost.com/software/memetastic))
 
 This is the backend for my MemeTastic Application.
 
